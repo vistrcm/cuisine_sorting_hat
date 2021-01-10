@@ -10,10 +10,12 @@ No details yet.
 
 Clone and run via
 
-    $ lein run
+```shell
+$ lein run
+Please, try the famous cuisine of Portugal today!
+```
 
 
-## Options
+## ToDo
 
-No options yet.
-
+1. expose as a web service.
