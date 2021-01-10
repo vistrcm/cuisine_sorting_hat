@@ -202,7 +202,7 @@
     "Zambia"
     "Zimbabwe"})
 
-(def exclude
+(def excluded-countries
   "List of countries to exclude. Most probably cuisine is not represented in SF"
   #{"Vanuatu"})
 
@@ -216,4 +216,4 @@
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-  (println (str "Please, try the famous cuisine of " (rand-country countries exclude) " today!")))
+  (println (str "Please, try the famous cuisine of " (rand-country countries excluded-countries) " today!")))
