@@ -1,5 +1,6 @@
 (ns cuisine-sorting-hat.core
-  (:gen-class))
+  (:gen-class)
+  (:require [clojure.set]))
 
 (def countries
   "Should be a full list of countries."
