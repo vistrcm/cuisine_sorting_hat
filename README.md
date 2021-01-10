@@ -4,30 +4,16 @@ Sometimes I can't decide what I want to eat.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+No details yet.
 
 ## Usage
 
-FIXME: explanation
+Clone and run via
 
-    $ java -jar cuisine_sorting_hat-0.1.0-standalone.jar [args]
+    $ lein run
+
 
 ## Options
 
-FIXME: listing of options this app accepts.
+No options yet.
 
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2021 FIXME
