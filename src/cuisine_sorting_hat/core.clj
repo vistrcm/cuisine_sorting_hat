@@ -1,6 +1,7 @@
 (ns cuisine-sorting-hat.core
   (:gen-class)
-  (:require [clojure.set]))
+  (:require [clojure.set])
+  (:use [ring.adapter.jetty]))
 
 (def countries
   "Should be a full list of countries."
@@ -213,7 +214,19 @@
   ([countries exclusions]
    (rand-nth (into [] (clojure.set/difference countries exclusions)))))
 
+(defn response []
+  (str "Please, try the famous cuisine of "
+       (rand-country countries excluded-countries)
+       " today!"))
+
+(defn handler [request]
+  {:status 200
+   :headers {"Content-Type" "text/html"}
+   :body (response)})
+
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-  (println (str "Please, try the famous cuisine of " (rand-country countries excluded-countries) " today!")))
+  (run-jetty handler {:port 8080}))
+
+
