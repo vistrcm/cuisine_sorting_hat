@@ -205,7 +205,8 @@
 
 (def excluded-countries
   "List of countries to exclude. Most probably cuisine is not represented in SF"
-  #{"Vanuatu"})
+  #{"Vanuatu"
+    "Benin"})
 
 (defn rand-country
   "return random country from countries except exclusions"
