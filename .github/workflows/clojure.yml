@@ -17,3 +17,11 @@ jobs:
       run: lein deps
     - name: Run tests
       run: lein test
+    - name: eastwood
+      run: lein eastwood
+    - name: kibit
+      run: lein kibit
+    - name: cljfmt
+      run: lein cljfmt check
+    - name: bikeshed
+      run: lein bikeshed

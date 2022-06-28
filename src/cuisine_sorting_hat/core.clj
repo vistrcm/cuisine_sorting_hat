@@ -206,7 +206,9 @@
 (def excluded-countries
   "List of countries to exclude. Most probably cuisine is not represented in SF"
   #{"Vanuatu"
-    "Benin"})
+    "Benin"
+    "Djibouti"
+    "Bahamas"})
 
 (defn rand-country
   "return random country from countries except exclusions"
@@ -229,5 +231,3 @@
   "I don't do a whole lot ... yet."
   [& args]
   (run-jetty handler {:port 8080}))
-
-
