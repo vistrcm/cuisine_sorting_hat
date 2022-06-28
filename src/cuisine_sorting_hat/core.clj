@@ -1,7 +1,7 @@
 (ns cuisine-sorting-hat.core
   (:gen-class)
-  (:require [clojure.set])
-  (:use [ring.adapter.jetty]))
+  (:require [clojure.set]
+            [ring.adapter.jetty :as jetty]))
 
 (def countries
   "Should be a full list of countries."
@@ -230,4 +230,4 @@
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-  (run-jetty handler {:port 8080}))
+  (jetty/run-jetty handler {:port 8080}))
