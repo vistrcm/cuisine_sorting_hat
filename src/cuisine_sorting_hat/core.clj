@@ -212,22 +212,20 @@
 
 (defn rand-country
   "return random country from countries except exclusions"
-  ([countries]
-   (rand-nth countries))
   ([countries exclusions]
-   (rand-nth (into [] (clojure.set/difference countries exclusions)))))
+   (rand-nth (vec (clojure.set/difference countries exclusions)))))
 
 (defn response []
   (str "Please, try the famous cuisine of "
        (rand-country countries excluded-countries)
-       " today!"))
+       " today!\n"))
 
-(defn handler [request]
+(defn handler [_request]
   {:status 200
    :headers {"Content-Type" "text/html"}
    :body (response)})
 
 (defn -main
   "I don't do a whole lot ... yet."
-  [& args]
+  []
   (jetty/run-jetty handler {:port 8080}))
